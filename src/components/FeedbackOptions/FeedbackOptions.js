@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, List } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({options, onLeaveFeedback }) => {
-  const buttons = Object.keys(options);
+  const buttons = options;
   return (
     <List>
       {buttons.map(item => (

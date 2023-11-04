@@ -29,12 +29,12 @@ export class App extends Component {
       <>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={this.state}
+            options={Object.keys(this.state)}
             onLeaveFeedback={this.onUpdate}
           />
         </Section>
         <Section title="Statistics">
-          {good > 0 || neutral > 0 || bad > 0 ? (
+          {countTotalFeedback > 0 ? (
             <Statistics
               good={good}
               neutral={neutral}
